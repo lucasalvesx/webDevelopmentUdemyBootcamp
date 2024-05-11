@@ -11,8 +11,11 @@ var firstChar = name.slice(0,1);
 // 3 after isolating, turn it into upper case by calling a native JS method (attention on syntaxis)
 var upperCaseChar = firstChar.toUpperCase();
 
-// 4 isolate the rest of name which won't be capitalizes
+// 4 isolate the rest of name which won't be capitalized
 var restOfName = name.slice(1, name.length);
+
+// In case the user inputs CAPITAL LETTERS in the middle of the value, we better add this function
+restOfName = restOfName.toLowerCase();
 
 // Print the result via alert, concatenating the variables
 alert("Hello, " + upperCaseChar + restOfName + "! " );
