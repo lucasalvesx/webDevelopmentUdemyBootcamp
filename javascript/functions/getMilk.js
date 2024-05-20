@@ -16,7 +16,7 @@ function getMilk(bottles) {
     alert ("moveUp")
     alert ("moveRight")
     alert ("moveRight")
-    //adding var input, so when the function gets executed, it executes with the user-selected value
+    //adding var input, so when the function gets invoked, it executes with the user-selected value
     alert ("buy" + bottles + "botles of Milk")
     alert ("moveLeft")
     alert ("moveLeft")
@@ -29,7 +29,7 @@ function getMilk(bottles) {
     alert ("enterHouse")
 }
 
-// so to call the function, we do:
+// so to invoke the function, we call:
 getMilk(2);
 
 // then the variable bottles is = 2
