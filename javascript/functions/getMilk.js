@@ -17,7 +17,7 @@ function getMilk(bottles) {
     alert ("moveRight")
     alert ("moveRight")
     //adding var input, so when the function gets invoked, it executes with the user-selected value
-    alert ("buy" + bottles + "botles of Milk")
+    alert ("buy" + bottles + "bottles of Milk")
     alert ("moveLeft")
     alert ("moveLeft")
     alert ("moveDown")
