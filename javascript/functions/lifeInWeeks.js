@@ -10,7 +10,15 @@
 function lifeInWeeks(age) {
 
     // age is a var with input value
-    // var age=prompt("how old are you?")
+    // var age=prompt("how old are you?");
 
-    var yearsLeft = 90 - age
+    var yearsLeft = 90 - age;
+    var days = yearsLeft * 365;
+    var weeks = yearsLeft * 52;
+    var months = yearsLeft * 12;
+
+    console.log("You still got " + days + " days, " + weeks + " weeks and " + months + " months left to live.")
+
 }
+
+lifeInWeeks(19)
