@@ -9,4 +9,8 @@
 
 function lifeInWeeks(age) {
 
+    // age is a var with input value
+    // var age=prompt("how old are you?")
+
+    var yearsLeft = 90 - age
 }
