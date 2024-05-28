@@ -7,4 +7,10 @@ var loveScore = Math.random() * 100;//generating random value between 1-100
 loveScore = Math.floor(loveScore) + 1;//rounding the random number down
 console.log("The pecentage of love happening between " + n1 + " and " + n2 + " is " + loveScore + "%");
 
-//now for the next section, we'll add a customized message based off the generated loveScore with if-else
+//now for the next section, we'll add a customized message based off the generated loveScore with if-else statements
+if (loveScore === 100) {
+    alert("Your love score is " + loveScore + "! You love each other a lot, eh?");
+} else {
+    alert("Your love score is " + loveScore + "... review your parameters...");
+}
+
