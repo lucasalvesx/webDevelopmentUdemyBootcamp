@@ -36,7 +36,7 @@ function getMilk(money, costPerBottle) {
 
 // we can store the output of the function above inside a variable, here called change:
 var change = getMilk(); //inside the (parameters) we specify how many bottles we'd wish
-console.log(change); // outputs the result
+console.log(change); // outputs result
 
 function calcBottles(startingMoney, costPerBottle) {
     numberOfBottles = Math.floor(startingMoney / costPerBottle);
