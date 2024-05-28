@@ -50,7 +50,7 @@ function calcChange(startingAmount, costPerBottle) {
 }
 
 // so we call the function, saying $5 is the parameter - as we declared - for how much money we got
-// adn also the costPerBottle 
+// and also output the costPerBottle 
 console.log("Hey there sir, here's your $ " + getMilk(5, 1.5) + " change! :)");
 
 
