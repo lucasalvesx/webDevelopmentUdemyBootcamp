@@ -1,10 +1,9 @@
-//UNDONE
-
 var output = [];
+var count = 1; //start counting from 1
 
-function FizzBuzz(output){
-    var n = prompt("Insert value:")
-    output.push(n)
+function FizzBuzz(){
+    output.push(count);
+    count++;
 
 
     console.log(output);
