@@ -1,6 +1,6 @@
 //model
-if (track === "clear") {//condition is true
-    goStraight();//runs this block of code
-} else { //if opposite (false),
-    turnRight();//runs this block of code
+if (track === "clear") {// if condition is true...
+    goStraight();//...run this block of code
+} else { //if opposite (false)...
+    turnRight();//run this block of code
 }

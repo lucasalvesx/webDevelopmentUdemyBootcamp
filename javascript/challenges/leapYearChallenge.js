@@ -1,24 +1,18 @@
-var year = prompt("Tell the year:"); 
-
+// for a year to be a leap yer, we got the rules:
+// it must be evenly divisible by 4, by 100 and by 400
+// to check this we use the modulo operator - the rest must be 0
 function isLeap(year) {
-    var div4 = year % 4 ;
-    var div100 = year % 100;
-    var div400 = year % 400; 
-    
-    if (dividedBy4 !== 0) {
-  return "Not leap year.";
-}
- 
-if (div4 === 0 && div100 !== 0) {
-  return "Leap year.";
-}
- 
-if (div4 === 0 && div100 === 0 && div400 === 0) {
-  return "Leap year.";
-} 
- 
-if (div4 === 0 && div100 === 0 && div400 !== 0) {
-  return "Not leap year.";
-} 
-
-}
+  if (year % 4 === 0){
+    if (year % 100 === 0){
+      if (year % 400 === 0){
+        return "Leap year";
+      } else {
+        return "Not leap year";
+      } 
+    } else {
+      return "Leap year";
+    }
+  } else {
+    return "Not leap year";
+  }
+  }
