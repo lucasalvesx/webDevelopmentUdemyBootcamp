@@ -8,8 +8,8 @@ function song() {//declarating function
     while (i >= 0) {//more o equal to 0, meaning it stops counting on 0
         
         //print this on console
-        console.log(i + " bottles of beer on the wall, " + i + " bottles of beer" +
-            "Take one down and pass it around, " + i + " bottles of beer on the wall."
+        console.log(i + " bottles of beer on the wall, " + i + " bottles of beer..." +
+            " Take one down and pass it around, " + i + " bottles of beer on the wall."
         );
 
         //then decrements from variable (still inside the loop)
