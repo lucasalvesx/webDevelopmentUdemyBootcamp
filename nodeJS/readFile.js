@@ -23,7 +23,7 @@ fs.writeFile("message.txt", "Hello Node.JS",
 
 //STEP 2: READ FILE
 
-//parameters: [error message if any], [file content], callback
+//parameters: [error message if any], [file content], [callback]
 fs.readFile("message.txt", 'utf-8', (err, data) => {
 if (err) throw err;//if error, output the error message declared up above
 console.log(data)//will output the message in the message.txt file

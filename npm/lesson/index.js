@@ -5,6 +5,6 @@
 
 import superheroes, { randomSuperhero } from 'superheroes';
 
-const name = randomSuperhero;
+const name = randomSuperhero();
 
-console.log("My name is" + "name");
+console.log("My name is " + name);
