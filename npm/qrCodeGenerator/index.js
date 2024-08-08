@@ -41,4 +41,3 @@ fs.writeFile("qrCode.txt", "content here!",
     (err) => { if (err) throw err; //error handling
         console.log("Success") }); //if no error, then success
 
-        //ok git
