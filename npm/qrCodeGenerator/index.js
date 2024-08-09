@@ -3,41 +3,42 @@
 // 2. use the qr-generator package to turn the entered URLin an qr code Image
 // 3. create a new txt file to save the useres input (w native nodejs module)
 
-//gettin the user input
-import inquirier from 'inquirier';
+//importing modules on the module version way
+import inquirer from 'inquirer';
+import qr from 'qr-image';
+import fs from 'fs';
 
-inquirier
+inquirer
     .prompt([
-        "What's your link to turn into a QR code?"
+        //requires an object and uses a property called name and message (from the package)
+        {
+            message: "Insert your link: ",
+            name: "URL", //to store the answer 
+        }
     ])
-    .then((text) => {
+    .then((answers) => {
+        const url = answers.URL
+        //now including objects from the qr-image module
+        // aka turning url into qrcode
+        var qr_svg = qr.image('This is my message');
+        qr_svg.pipe(fs.createWriteStream('generate.png'));
 
+        // now registering users input into a .txt file w/ native module
+        //parameters: file name,  content, callback to handle errors or success
+        fs.writeFile("userInput.txt", message,
+            (err) => {
+                if (err) throw err; //error handling
+                console.log("Success")
+            }); //if no error, then success
     })
     .catch((error) => {
         if (error.isTtyError) {
-            console.error("Cannot be displayed")
+
         }
         else {
-            console.log("Success!")
+
         }
     });
 
-//turning data into a QR
-var qr = require('qr-image');
 
-// var qr_svg = qr.image('I love QR!', { type: 'svg' });
-// qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
-
-// var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
-
-// qr.image(text, [ec_level | options]);
-
-//creating new txt file with native node module
-
-const fs = require('fs');//importing module
-
-//parameters: file name,  content, callback to handle errors or success
-fs.writeFile("qrCode.txt", "content here!", 
-    (err) => { if (err) throw err; //error handling
-        console.log("Success") }); //if no error, then success
 
