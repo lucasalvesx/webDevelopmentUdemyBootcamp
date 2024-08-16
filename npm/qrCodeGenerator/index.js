@@ -20,25 +20,22 @@ inquirer
         const url = answers.URL
         //now including objects from the qr-image module
         // aka turning url into qrcode
-        var qr_svg = qr.image('This is my message');
+        var qr_svg = qr.image(url);
         qr_svg.pipe(fs.createWriteStream('generate.png'));
 
         // now registering users input into a .txt file w/ native module
         //parameters: file name,  content, callback to handle errors or success
-        fs.writeFile("userInput.txt", message,
+        fs.writeFile("userInput.txt", url,
             (err) => {
                 if (err) throw err; //error handling
-                console.log("Success")
+                console.log("Success");
             }); //if no error, then success
     })
     .catch((error) => {
         if (error.isTtyError) {
-
+            console.error("Error");
         }
         else {
-
+            console.error("Something did'n work as expected", error);
         }
     });
-
-
-
